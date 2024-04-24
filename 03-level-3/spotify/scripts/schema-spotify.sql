@@ -54,8 +54,20 @@ CREATE TABLE Playlists (
   playlist_name VARCHAR(255) NOT NULL,
   creation_date DATE NOT NULL,
   status ENUM('active', 'deleted') NOT NULL,
-  deletion_date DATE NULL, 
+  deletion_date DATE NULL,
+  is_shared BOOLEAN NOT NULL DEFAULT FALSE, 
+  is_public BOOLEAN NOT NULL DEFAULT FALSE, 
   FOREIGN KEY (user_id) REFERENCES Users(user_id) 
+);
+
+-- Playlist_access: manage access rights to playlists
+CREATE TABLE Playlist_access (
+  playlist_id INT NOT NULL,
+  user_id INT NOT NULL,
+  access_type ENUM('owner', 'collaborator') NOT NULL,
+  PRIMARY KEY (playlist_id, user_id),
+  FOREIGN KEY (playlist_id) REFERENCES Playlists(playlist_id),
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
 -- Artists Table: Stores artists who may have published multiple albums.

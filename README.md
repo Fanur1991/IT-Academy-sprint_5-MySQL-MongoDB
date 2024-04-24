@@ -8,12 +8,12 @@ Development of database structures addressing concepts and practices related to 
 
 The repository models the management of an optical store. Here are the key points summarized:
 
-| **Entities** | **Highlighted Attributes**                                                                                                       |
-| -------------| -------------------------------------------------------------------------------------------------------------------------------- |
-| Suppliers    | Name, address, phone, fax, NIF.                                                                                                  |
-| Glasses      | Bbrand, supplier, graduation, frame type, frame color, lens color and price.                                                     |
-| Customers    | Name, address id, phone, email, registration date, referred by other customers.                                                  |
-| Sales        | Employee id, customer id, glasses id and sale date.                                                                              |
+| **Entities** | **Highlighted Attributes**                                                      |
+| ------------ | ------------------------------------------------------------------------------- |
+| Suppliers    | Name, address, phone, fax, NIF.                                                 |
+| Glasses      | Bbrand, supplier, graduation, frame type, frame color, lens color and price.    |
+| Customers    | Name, address id, phone, email, registration date, referred by other customers. |
+| Sales        | Employee id, customer id, glasses id and sale date.                             |
 
 ### Optica Verification Queries:
 
@@ -25,13 +25,13 @@ The repository models the management of an optical store. Here are the key point
 
 This level focuses on designing a website for ordering from a pizzeria. Highlighted points:
 
-| **Entities**        | **Highlighted Attributes**                                                   |
-| --------------------| ---------------------------------------------------------------------------- |
-| Customers           | Name, address, postal code, phone.                                           |
-| Orders              | Date/time, type of delivery, quantity and types of products, total price.    |
-| Products            | Pizzas, burgers and drinks.                                                  |
-| Pizza Categories    | Unique identifier and name.                                                  |
-| Employees           | Name, surnames, NIF, phone, role (cashier or delivery person).               |
+| **Entities**     | **Highlighted Attributes**                                                |
+| ---------------- | ------------------------------------------------------------------------- |
+| Customers        | Name, address, postal code, phone.                                        |
+| Orders           | Date/time, type of delivery, quantity and types of products, total price. |
+| Products         | Pizzas, burgers and drinks.                                               |
+| Pizza Categories | Unique identifier and name.                                               |
+| Employees        | Name, surnames, NIF, phone, role (cashier or delivery person).            |
 
 ### Pizzeria Verification Queries:
 
@@ -42,26 +42,26 @@ This level focuses on designing a website for ordering from a pizzeria. Highligh
 
 This level represents a simplified version of YouTube with the following features:
 
-| **Entities**          | **Highlighted Attributes**                                                                  |
-| ----------------------| --------------------------------------------------------------------------------------------|
-| Users                 | Email, password, username, date of birth, gender, country, postal code.                     |
-| Videos                | Title, description, size, video file name, duration, thumbnail, views, likes, dislikes.     |
-| Channels              | Name, description, creation date.                                                           |
-| Playlists             | Name, creation date, status (public or private).                                            |
+| **Entities** | **Highlighted Attributes**                                                              |
+| ------------ | --------------------------------------------------------------------------------------- |
+| Users        | Email, password, username, date of birth, gender, country, postal code.                 |
+| Videos       | Title, description, size, video file name, duration, thumbnail, views, likes, dislikes. |
+| Channels     | Name, description, creation date.                                                       |
+| Playlists    | Name, creation date, status (public or private).                                        |
 
 ## Level 3 - Spotify
 
 This level represents the database needed for Spotify with free and premium users:
 
-| **Entities**             | **Highlighted Attributes**                                                              |
-| ------------------------ | --------------------------------------------------------------------------------------- |
-| Users                    | Email, password, username, date of birth, gender, country, postal code.                 |
-| Premium Subscriptions    | Start date, renewal date, payment method.                                               |
-| Credit Cards             | Number, expiration month and year, security code.                                       |
-| Playlists                | Title, number of songs, creation date, status (active or deleted).                      |
-| Songs                    | Title, duration, plays.                                                                 |
-| Albums and Artists       | Unique identifiers, names, images.                                                      |
-| Followings and Favorites | Followings of artists, albums, and songs.                                               |
+| **Entities**             | **Highlighted Attributes**                                              |
+| ------------------------ | ----------------------------------------------------------------------- |
+| Users                    | Email, password, username, date of birth, gender, country, postal code. |
+| Premium Subscriptions    | Start date, renewal date, payment method.                               |
+| Credit Cards             | Number, expiration month and year, security code.                       |
+| Playlists                | Title, number of songs, creation date, status (active or deleted).      |
+| Songs                    | Title, duration, plays.                                                 |
+| Albums and Artists       | Unique identifiers, names, images.                                      |
+| Followings and Favorites | Followings of artists, albums, and songs.                               |
 
 ## License
 

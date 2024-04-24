@@ -25,12 +25,28 @@ INSERT INTO Payments (subscription_id, payment_date, order_number, total) VALUES
 (3, '2021-05-20', 'ORDER003', 150.00);
 
 -- Inserting Playlists
-INSERT INTO Playlists (user_id, playlist_name, creation_date, status, deletion_date) VALUES
-(1, 'Workout Hits', CURDATE(), 'active', NULL),
-(2, 'Chill Vibes', CURDATE(), 'active', NULL),
-(3, 'Top Charts', CURDATE(), 'active', NULL),
-(4, 'Morning Routine', CURDATE(), 'deleted', NULL),
-(5, 'Party Mix', CURDATE(), 'active', NULL);
+INSERT INTO Playlists (user_id, playlist_name, creation_date, status, deletion_date, is_shared, is_public) VALUES
+(1, 'Workout Hits', CURDATE(), 'active', NULL, FALSE, TRUE),
+(2, 'Chill Vibes', CURDATE(), 'active', NULL, FALSE, TRUE),
+(3, 'Top Charts', CURDATE(), 'active', NULL, FALSE, TRUE),
+(4, 'Morning Routine', CURDATE(), 'deleted', NULL, FALSE, FALSE),
+(5, 'Party Mix', CURDATE(), 'active', NULL, FALSE, TRUE);
+
+-- Inserting Playlist access
+INSERT INTO Playlist_access (playlist_id, user_id, access_type) VALUES
+(1, 1, 'owner'),
+(2, 2, 'owner'),
+(3, 3, 'owner'),
+(4, 4, 'owner'),
+(5, 5, 'owner');
+
+-- Assuming some playlists are collaborative:
+INSERT INTO Playlist_access (playlist_id, user_id, access_type) VALUES
+(1, 2, 'collaborator'),
+(2, 3, 'collaborator'),
+(3, 4, 'collaborator'),
+(4, 5, 'collaborator'),
+(5, 1, 'collaborator');
 
 -- Inserting Artists
 INSERT INTO Artists (name, image_url) VALUES
